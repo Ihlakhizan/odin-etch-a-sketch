@@ -1,4 +1,8 @@
 /* GENERAL */
+:root {
+    --off-black: #303030;
+}
+
 * {
     box-sizing: border-box;
     font-family: "Rubik", Arial, Helvetica, sans-serif;
@@ -11,12 +15,12 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
 }
 
-header, main, footer {
+header, footer {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* HEADER */
@@ -25,25 +29,41 @@ header {
 }
 
 h1 {
-    margin: 20px 0;
-    font-size: 48px;
+    padding: 20px 0;
+    font-size: 64px;
     font-weight: 700;
+    text-align: center;
 }
 
 /* MAIN */
 main {
-    flex: 1;
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    margin-bottom: auto;
     gap: 50px;
 }
 
 .settings {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
+
+.color-settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+#color-selector {
+    order: 1;
+}
+
 
 input {
     border: 0;
@@ -54,30 +74,21 @@ input {
 button {
     width: 100%;
     font-size: 18px;
-    color: #303030;
+    color: var(--off-black);
     background-color: #F5F5F5;
-    border: 1px solid #303030;
+    border: 1px solid var(--off-black);
     border-radius: 5px;
     padding: 10px 20px;
     transition: scale 0.2s, color 0.2s, background-color 0.2s;
-}
-
-#clear-button {
-    transition: none;
-    transition: scale 0.2s;
 }
 
 button:hover {
     scale: 1.05;
 }
 
-button:focus {
-    background-color: #303030;
-    color: white;
-}
-
-#clear-button:focus {
-    background-color: #F5F5F5;
+button.button-active {
+    background-color: black;
+    color: #F5F5F5;
 }
 
 .grid-section, .grid-settings {
@@ -89,17 +100,18 @@ button:focus {
 /* GRID */
 .grid-container {
     width: 500px;
+    max-width: 100vw;
     height: 500px;
+    max-height: 100vw;
     display: flex;
     border: 1px solid black;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 .grid-cell {
-    color: white;
-    margin: 0;
-    padding: 0;
-    w
+    border: 0.1px solid #F5F5F5;
+    border-collapse: collapse;
 }
 
 /* FOOTER */
@@ -109,9 +121,9 @@ footer {
 }
 
 .footer-text {
-    margin: 10px 0;
+    padding: 10px 0;
     font-size: 20px;
-    color: #303030;
+    color: var(--off-black);
 }
 
 a {

@@ -9,18 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    <title>Etch-a-Sketch</title>
+    <title>Etch-a-Sketch!</title>
 </head>
 <body>
     <header>
-        <h1>Etch-a-Sketch</h1>
+        <h1>Etch-a-Sketch!</h1>
     </header>
     <main>
         <div class="settings">
-            <input type="color" id="color-selector" value="#2A52BE">
-            <button id="color-button">Color Mode</button>
-            <button id="acid-button">Psychedelic Mode</button>
-            <button id="eraser-button">Eraser</button>
+            <div class="color-settings">
+                <input type="color" id="color-selector" value="#2A52BE" name="color-input">
+                <label for="color-input">Color:</label>
+            </div>
+            <button class="button-active button-toggleable" id="color-button">Color Mode</button>
+            <button class="button-toggleable" id="acid-button">Psychedelic Mode</button>
+            <button class="button-toggleable" id="eraser-button">Eraser</button>
             <button id="clear-button">Clear</button>
         </div>
         <div class="grid-section">
@@ -32,7 +35,7 @@
         </div>
     </main>
     <footer>
-        <p class="footer-text">Created by <a href="https://github.com/Ihlakhizan/odin-rock-paper-scissors">Manoranjan Kumar</a></p>
+        <p class="footer-text">Created by <a href="https://github.com/Ihlakhizan/odin-etch-a-sketch">Manoranjan Kumar</a></p>
     </footer>
 </body>
 </html>
