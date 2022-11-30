@@ -1,0 +1,103 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    font-family: "Rubik", Arial, Helvetica, sans-serif;
+    /*border: 1px solid red;*/
+}
+
+body {
+    background-color: #F5F5F5;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+header, main, footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* HEADER */
+header {
+    margin: 0;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    border: 0;
+    background-color: inherit;
+    height: 50px;
+}
+
+button {
+    width: 100%;
+    font-size: 18px;
+    color: #303030;
+    background-color: #F5F5F5;
+    border: 1px solid #303030;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: scale 0.2s, color 0.2s, background-color 0.2s;
+}
+
+#clear-button {
+    transition: none;
+    transition: scale 0.2s;
+}
+
+button:hover {
+    scale: 1.05;
+}
+
+button:focus {
+    background-color: #303030;
+    color: white;
+}
+
+#clear-button:focus {
+    background-color: #F5F5F5;
+}
+
+.grid-section, .grid-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-text {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #303030;
+}
+
+a {
+    text-decoration: none;
+    color: #2A52BE;
+}
